@@ -22,7 +22,7 @@ namespace GitApp
 
         static void Method2()
 		{
-            // dev 2 comment expanded.
+            // dev 2 comment expanded again.
 			Console.WriteLine("Dev 2 Method");
 		}
     }
