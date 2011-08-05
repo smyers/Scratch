@@ -16,6 +16,7 @@ namespace GitApp
 
         static void Method1()
         {
+            // dev 1 comment
             Console.WriteLine("Dev 1 Method");
         }
 
