@@ -20,14 +20,17 @@ REVIEW: include in initial contract? (use existing ePRO SLT?)
 
 ## Security ##
 ePro serves responses over [SSL](http://en.wikipedia.org/wiki/Secure_Sockets_Layer)
-and performs [Authorization](#authorization)
+and performs user [Authentication](#authentication).
 
 ## Application Programming Interface (API)
 
 * This service returns hypermedia-enriched responses. The media type of the response is `application/vnd.hale+json`.
 
-### Authorization
-TODO:
+### Authentication
+Each request to the service should include either a username and password, or an authentication token.
+If the request contains a username and password, it will be verified with iMedidata and a new authentication
+token will be returned in the response.
+Subsequent requests should include that authentication token until the token expires.
 
 TODO: how to represent authentication params? (in req/resp). As attributes, shown in json examples below?
 
@@ -53,8 +56,8 @@ Returns a collection of link relations that can be used to retrieve the individu
 * `form_items` - The list of individual form data URIs, corresponding to the given user.
 * `edit_check_items` - The list of individual edit check data URIs, corresponding to the given user.
 
-REVIEW: include hypermedia reference for self, profile, type, help?
-Note: The `profile`, `type` and `help` transitions are defined in [RFC 5988 - Web Linking](http://tools.ietf.org/html/rfc5988).
+Note: The `profile`, `type` and `help` transitions are defined in
+[RFC 5988 - Web Linking](http://tools.ietf.org/html/rfc5988). (TODO: use this link?)
 
 ```json
 {
@@ -177,7 +180,7 @@ TODO: An edit check is...
 
 #### Attributes ####
 * `uuid` (read-only - managed by the service) - Unique identifier for the Edit Check (length between 24 and 36 inclusive).
-REVIEW: Get attributes from current ePRO
+TODO: Get attributes from current ePRO
 
 #### Routes ####
 **GET: `/v1/edit_checks/:uuid`**
