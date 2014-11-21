@@ -105,7 +105,7 @@ TODO: A form is...
 
 #### Attributes ####
 * `uuid` (read-only - managed by the service) - Unique identifier for the Form (length between 24 and 36 inclusive).
-REVIEW: Get attributes from current ePRO (assuming not the blob from ODM?)
+* REVIEW: Get attributes from current ePRO (assuming not the blob from ODM?)
 
 #### Routes ####
 **GET: `/v1/forms/:uuid`**
@@ -180,7 +180,7 @@ TODO: An edit check is...
 
 #### Attributes ####
 * `uuid` (read-only - managed by the service) - Unique identifier for the Edit Check (length between 24 and 36 inclusive).
-TODO: Get attributes from current ePRO
+* TODO: Get attributes from current ePRO
 
 #### Routes ####
 **GET: `/v1/edit_checks/:uuid`**
