@@ -35,8 +35,7 @@ Subsequent requests should include that authentication token until the token exp
 The username and password are sent as an `Authorization` header according to
 [Basic Access Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication).
 For token requests, the `Authorization` header is populated with the token, such as
-
-`Authorization: Token token="h480djs93hd8"`
+```Authorization: Token token="h480djs93hd8"```
 
 ### List Available Form Data ###
 REVIEW: the homepage entry point - name?
